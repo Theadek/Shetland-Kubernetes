@@ -19,7 +19,8 @@ spec:
         image: jokerofnoxus/shetland:v1
         ports:
         - containerPort: 80
-
+        securityContext:
+          allowPrivilegeEscalation: false
 ---
 
 apiVersion: v1
