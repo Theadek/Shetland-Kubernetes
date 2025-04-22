@@ -7,7 +7,7 @@
 			if(res.target.status == 200){
 				var jj = JSON.parse(res.target.responseText);
 				var random_dog = jj.message[Math.floor(Math.random() *jj.message.length)];
-				document.body.innerHTML += '<img src="' + random_dog + '">';
+				document.body.innerHTML += '<img height="600" src="' + random_dog + '">';
 			}
 			else{
 				document.body.innerHTML = "Cannot get info from dog api.";
