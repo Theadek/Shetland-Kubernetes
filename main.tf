@@ -30,7 +30,7 @@ resource "aws_instance" "example"{
 	instance_type = "t2.micro"
 	vpc_security_group_ids = [aws_security_group.instance.id]
 
-	user_data = templatefile("./user-data.sh", {})
+	user_data = file("./user-data.sh")
 
 	user_data_replace_on_change = true
 
